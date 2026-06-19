@@ -12,7 +12,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: 'Checkout'
-        uses: 'actions/checkout@v6'
+        uses: 'actions/checkout@v7'
       - name: 'Install Dependencies'
         run: |
           # Adding KDE neon PPA to the containerized Ubuntu because it lacks dependencies for Plasma 6
