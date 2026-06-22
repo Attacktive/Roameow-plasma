@@ -43,7 +43,7 @@ jobs:
           echo 'mv ''"' "$BUILD_OUTPUT_DIRECTORY/$artifact_name" '.'
           mv "$BUILD_OUTPUT_DIRECTORY/$artifact_name" .
       - name: 'Create Release'
-        uses: 'softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda'
+        uses: 'softprops/action-gh-release@718ea10b132b3b2eba29c1007bb80653f286566b'
         with:
           prerelease: true
           generate_release_notes: true
