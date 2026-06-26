@@ -1,5 +1,7 @@
-sh package/translate/merge
-sh package/translate/build
+#!/usr/bin/env bash
+
+bash package/translate/merge
+bash package/translate/build
 
 LANGUAGE='ja_JP'
 LANG='ja_JP.UTF-8'

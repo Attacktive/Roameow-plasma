@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 rm -fr build
 mkdir build
