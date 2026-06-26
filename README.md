@@ -3,7 +3,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/attacktive/roameow-plasma/badge)](https://www.codefactor.io/repository/github/attacktive/roameow-plasma)
 [![Release](https://github.com/Attacktive/Roameow-plasma/actions/workflows/release.yaml/badge.svg)](https://github.com/Attacktive/Roameow-plasma/actions/workflows/release.yaml)
 
-A fun Plasma 6 widget that features an animated nyancat wandering around your desktop!
+A fun Plasma 6 widget that features an animated Nyan Cat roaming around your desktop!
 
 It's completely useless by design. 😏
 
