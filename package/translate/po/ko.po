@@ -6,6 +6,11 @@ msgstr ""
 "Language: ko\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-06-26 17:55+0900\n"
+"Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../contents/config/config.qml ../contents/ui/config/configImage.qml
 msgid "Image"
@@ -53,7 +58,7 @@ msgstr "좌우 반전:"
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Overall Movement:"
-msgstr "이동:"
+msgstr "전체 움직임:"
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Enabled"
@@ -85,11 +90,11 @@ msgstr "테스트"
 
 #: ../contents/ui/config/configSound.qml
 msgid "Custom sound:"
-msgstr "사용자 지정 소리:"
+msgstr "사용자 지정 효과음:"
 
 #: ../contents/ui/config/configSound.qml
 msgid "Path to custom sound file"
-msgstr "사용자 지정 소리 파일 경로"
+msgstr "사용자 지정 효과음 파일 경로"
 
 #: ../contents/ui/config/configSound.qml
 msgid "Browse..."

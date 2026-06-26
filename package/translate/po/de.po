@@ -6,6 +6,11 @@ msgstr ""
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-06-26 17:55+0900\n"
+"Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../contents/config/config.qml ../contents/ui/config/configImage.qml
 msgid "Image"
@@ -45,7 +50,7 @@ msgstr "Bilddatei auswählen"
 
 #: ../contents/ui/config/configImage.qml
 msgid "Clear"
-msgstr ""
+msgstr "Löschen"
 
 #: ../contents/ui/config/configImage.qml
 msgid "Mirror Image:"
@@ -65,7 +70,7 @@ msgstr "Geschwindigkeit:"
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Random Idle:"
-msgstr ""
+msgstr "Zufällige Untätigkeit:"
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Idle Probability (%):"
@@ -81,7 +86,7 @@ msgstr "Lautstärke:"
 
 #: ../contents/ui/config/configSound.qml
 msgid "Test"
-msgstr ""
+msgstr "Testen"
 
 #: ../contents/ui/config/configSound.qml
 msgid "Custom sound:"

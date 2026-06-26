@@ -6,6 +6,11 @@ msgstr ""
 "Language: pt\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-06-26 17:55+0900\n"
+"Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../contents/config/config.qml ../contents/ui/config/configImage.qml
 msgid "Image"

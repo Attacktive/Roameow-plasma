@@ -6,6 +6,11 @@ msgstr ""
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-06-26 17:55+0900\n"
+"Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../contents/config/config.qml ../contents/ui/config/configImage.qml
 msgid "Image"
@@ -69,7 +74,7 @@ msgstr "ランダム待機："
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Idle Probability (%):"
-msgstr "アイドル確率（％）："
+msgstr "待機確率（％）："
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Image Flipping Based on the Direction:"

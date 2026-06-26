@@ -3,7 +3,7 @@
 	"KPlugin": {
 		"Id": "xyz.attacktive.nyan-wanderer",
 		"Name": "Roameow",
-		"Version": "2.0.0",
+		"Version": "2.0.1",
 		"Description": "Roameow — your Nyan Cat, roaming the desktop",
 		"Category": "Fun and Games",
 		"Icon": "animal-symbolic",
