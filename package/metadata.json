@@ -2,7 +2,7 @@
 	"KPackageStructure": "Plasma/Applet",
 	"KPlugin": {
 		"Id": "xyz.attacktive.nyan-wanderer",
-		"Name": "Nyan Wanderer",
+		"Name": "Roameow",
 		"Version": "1.2.3",
 		"Description": "A cute Nyan Cat that wanders around your desktop",
 		"Category": "Fun and Games",
@@ -13,7 +13,7 @@
 				"Email": "tribute2pantera@gmail.com"
 			}
 		],
-		"Website": "https://github.com/attacktive/wandering-nyancat",
+		"Website": "https://github.com/Attacktive/Roameow-plasma",
 		"License": "MIT",
 		"EnabledByDefault": true
 	},

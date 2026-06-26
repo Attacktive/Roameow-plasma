@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nyan-wanderer\n"
-"Report-Msgid-Bugs-To: https://github.com/Attacktive/nyan-wanderer\n"
+"Report-Msgid-Bugs-To: https://github.com/Attacktive/Roameow-plasma\n"
 "POT-Creation-Date: 2025-04-27 15:05+0900\n"
 "Language: pt\n"
 "Content-Type: text/plain; charset=UTF-8\n"
