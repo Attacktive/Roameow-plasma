@@ -3,7 +3,7 @@
 .cache
 /build/
 
-CMakeList.txt.user
+CMakeLists.txt.user*
 
 /package/contents/locale/
 infiles.list
