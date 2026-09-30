@@ -15,20 +15,16 @@ jobs:
         uses: 'dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: 'Approve PR'
+      - name: 'Approve patch/minor PR'
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'
         run: |
           gh pr review "$PR_URL" --approve
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
       - name: 'Enable Auto-Merge (Rebase)'
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'
         run: 'gh pr merge "$PR_URL" --auto --rebase'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
-      - name: 'Delete branch when merged'
-        if: 'github.event.pull_request.merged == true'
-        run: 'gh api -X DELETE "$URL_TO_BRANCH"'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          URL_TO_BRANCH: "repos/${{ github.repository }}/git/refs/heads/${{ github.event.pull_request.head.ref }}"
