@@ -20,18 +20,15 @@ Roameow is also available on the [KDE Store](https://store.kde.org/p/2263448/).
 
 After installation, add the widget to your desktop or panel through the Plasma widgets menu.
 
-### Build from source
+### Install from source
 
-Building from source is intended for development and requires a Plasma 6 development environment.
+Installing from source is intended for development. Roameow itself does not need to be compiled; Plasma loads the widget package directly.
 
-On Arch Linux, install the required dependencies:
-
-```bash
-$ sudo pacman -S base-devel extra-cmake-modules plasma-sdk gettext
-```
-
-Then build and install the widget:
+The translation catalogs are generated from the source `.po` files, so make sure `msgfmt` from gettext is installed, then run:
 
 ```bash
-$ ./install.sh
+$ bash package/translate/build
+$ kpackagetool6 --type Plasma/Applet --install package
 ```
+
+If Roameow is already installed, use `--upgrade` instead of `--install`.
