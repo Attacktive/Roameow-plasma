@@ -14,22 +14,24 @@ It's completely useless by design. 😏
 
 ## Installation
 
-1. Make sure you have the required dependencies:
-	- Arch Linux
-	```bash
-	$ sudo pacman -S base-devel extra-cmake-modules plasma-sdk gettext
-	```
-	- Ubuntu 24.04
-	```bash
-	# Adding KDE neon PPA to the containerized Ubuntu because it lacks dependencies for Plasma 6
-	$ echo "deb [trusted=yes] http://archive.neon.kde.org/user noble main" | sudo tee /etc/apt/sources.list.d/neon.list
-	$ sudo apt update
-	$ sudo apt install build-essential kf6-extra-cmake-modules plasma-framework6-dev gettext
-	```
+Use Plasma's **Install New Widgets** interface and search for **Roameow**.
 
-2. Build and install the widget:
-	```bash
-	$ ./install.sh
-	```
+Roameow is also available on the [KDE Store](https://store.kde.org/p/2263448/).
 
-3. Add the widget to your desktop or panel through the Plasma widgets menu
+After installation, add the widget to your desktop or panel through the Plasma widgets menu.
+
+### Build from source
+
+Building from source is intended for development and requires a Plasma 6 development environment.
+
+On Arch Linux, install the required dependencies:
+
+```bash
+$ sudo pacman -S base-devel extra-cmake-modules plasma-sdk gettext
+```
+
+Then build and install the widget:
+
+```bash
+$ ./install.sh
+```
