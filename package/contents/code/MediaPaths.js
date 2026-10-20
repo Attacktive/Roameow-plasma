@@ -1,5 +1,3 @@
-.pragma library
-
 /**
  * Resolves a media source path or URL.
  * Returns the fallback when path is empty, preserves full URLs, and converts legacy bare absolute paths into file:// URLs.
