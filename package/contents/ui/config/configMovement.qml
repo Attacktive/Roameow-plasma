@@ -72,14 +72,21 @@ Page {
 
 			SpinBox {
 				id: idleProbabilitySpinBox
-				Kirigami.FormData.label: i18n('Idle Probability (%):')
-				from: 1
+				Kirigami.FormData.label: i18n('Idle time (%):')
+				from: 0
 				to: 100
 				value: movementPage.cfg_idleProbabilityDefault
 				enabled: enableMovementCheckBox.checked && enableRandomIdleCheckBox.checked
 
 				Layout.fillWidth: true
 				Layout.maximumWidth: Kirigami.Units.gridUnit * 10
+			}
+
+			Label {
+				Layout.fillWidth: true
+				Layout.maximumWidth: Kirigami.Units.gridUnit * 22
+				text: i18n('Approximate time spent idling. 0% keeps moving; 100% stays idle.')
+				wrapMode: Text.WordWrap
 			}
 
 			CheckBox {

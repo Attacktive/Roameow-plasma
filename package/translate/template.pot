@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nyan-wanderer\n"
 "Report-Msgid-Bugs-To: https://github.com/Attacktive/Roameow-plasma\n"
-"POT-Creation-Date: 2026-10-20 21:58+0900\n"
+"POT-Creation-Date: 2026-10-20 22:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,7 +126,11 @@ msgid "Random Idle:"
 msgstr ""
 
 #: ../contents/ui/config/configMovement.qml
-msgid "Idle Probability (%):"
+msgid "Idle time (%):"
+msgstr ""
+
+#: ../contents/ui/config/configMovement.qml
+msgid "Approximate time spent idling. 0% keeps moving; 100% stays idle."
 msgstr ""
 
 #: ../contents/ui/config/configMovement.qml

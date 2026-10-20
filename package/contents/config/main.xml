@@ -42,7 +42,7 @@
 			<default>false</default>
 		</entry>
 		<entry name="idleProbability" type="Int">
-			<label>Probability of becoming idle (percentage)</label>
+			<label>Approximate percentage of time spent idling</label>
 			<default>13</default>
 		</entry>
 		<entry name="enableFlipping" type="Bool">

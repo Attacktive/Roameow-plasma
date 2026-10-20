@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nyan-wanderer\n"
 "Report-Msgid-Bugs-To: https://github.com/Attacktive/Roameow-plasma\n"
-"POT-Creation-Date: 2026-10-20 21:58+0900\n"
+"POT-Creation-Date: 2026-10-20 22:14+0900\n"
 "PO-Revision-Date: 2026-06-26 17:55+0900\n"
 "Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -121,8 +121,12 @@ msgid "Random Idle:"
 msgstr "Espera aleatoria:"
 
 #: ../contents/ui/config/configMovement.qml
-msgid "Idle Probability (%):"
-msgstr "Probabilidad de inactividad (%):"
+msgid "Idle time (%):"
+msgstr ""
+
+#: ../contents/ui/config/configMovement.qml
+msgid "Approximate time spent idling. 0% keeps moving; 100% stays idle."
+msgstr ""
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Image Flipping Based on the Direction:"
@@ -171,6 +175,9 @@ msgstr ""
 #: ../contents/ui/config/configSound.qml
 msgid "Use Built-in Sound"
 msgstr ""
+
+#~ msgid "Idle Probability (%):"
+#~ msgstr "Probabilidad de inactividad (%):"
 
 #~ msgid "Leave empty for default Nyan Cat"
 #~ msgstr "Dejar vacío para el Nyan Cat predeterminado"
