@@ -25,6 +25,8 @@ Click the cat to hear it meow.
 
 If a custom image or sound cannot load, its configuration page shows an error with actions to choose another file or return to the built-in asset.
 The selected path is kept until you explicitly replace or reset it.
+Absolute paths containing `#` or `?` are supported, as are percent-encoded paths saved by older versions.
+Existing percent escapes are preserved for compatibility; use the file picker for filenames containing literal sequences such as `%20`.
 
 
 ## Installation
@@ -50,7 +52,7 @@ If Roameow is already installed, use `--upgrade` instead of `--install`.
 
 ## Development checks
 
-Run the sprite interaction, idle-transition, and compact configuration dialog regression tests with Qt's QML test runner:
+Run the sprite interaction, idle-transition, compact configuration dialog, and media-path regression tests with Qt's QML test runner:
 
 ```bash
 QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software /usr/lib/qt6/bin/qmltestrunner -input tests
