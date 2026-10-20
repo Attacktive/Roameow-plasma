@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nyan-wanderer\n"
 "Report-Msgid-Bugs-To: https://github.com/Attacktive/Roameow-plasma\n"
-"POT-Creation-Date: 2026-10-20 18:59+0900\n"
+"POT-Creation-Date: 2026-10-20 21:58+0900\n"
 "PO-Revision-Date: 2026-06-26 17:55+0900\n"
 "Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
 "Language-Team: German\n"
@@ -85,7 +85,7 @@ msgid "Custom idle image:"
 msgstr ""
 
 #: ../contents/ui/config/configImage.qml
-msgid "Leave empty for built-in sleeping cat"
+msgid "Leave empty for matching built-in cat"
 msgstr ""
 
 #: ../contents/ui/config/configImage.qml

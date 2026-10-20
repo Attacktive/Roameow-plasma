@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" shape-rendering="crispEdges">
+	<g fill="#000000">
+		<path d="M112 2h14v6h-4v4h-4v2h8v6h-16v-6h4v-4h4V8h-8V4h2z"/>
+		<path d="M104 20h12v6h-4v2h-2v2h6v6h-14v-6h4v-2h2v-2h-6v-4h2z"/>
+		<path d="M94 36h12v6h-4v2h-2v2h6v6H92v-6h4v-2h2v-2h-6v-4h2z"/>
+		<path d="M28 46h42v2h2v2h2v6h-2v16h-2v2H26v-2h-2V50h2v-2h2z"/>
+		<path d="M24 66h4v2h-4v2h-2v2h6v4h-8v-2h-4v-6h4v-2z"/>
+		<path d="M34 74h8v2h2v4H32v-4h2zM48 74h8v2h2v4H46v-4h2z"/>
+	</g>
+	<g fill="#993300">
+		<rect x="28" y="50" width="42" height="20"/>
+		<rect x="30" y="48" width="38" height="24"/>
+	</g>
+	<rect x="32" y="50" width="34" height="20" fill="#ee8800"/>
+	<g fill="#ffb522">
+		<rect x="34" y="52" width="6" height="6"/>
+		<rect x="42" y="52" width="6" height="6"/>
+		<rect x="50" y="52" width="6" height="6"/>
+		<rect x="58" y="52" width="6" height="6"/>
+		<rect x="34" y="60" width="6" height="6"/>
+		<rect x="42" y="60" width="6" height="6"/>
+		<rect x="50" y="60" width="6" height="6"/>
+		<rect x="58" y="60" width="6" height="6"/>
+	</g>
+	<g fill="#660000">
+		<path d="M66 48h6v2h2v4h12v-4h2v-2h6v6h4v2h2v18h-4v2h-4v6h-8v-4h-6v4h-8v-6h-4v-2h-2V54h2z"/>
+		<path d="M20 68h4v2h-2v2h4v2h-6v-2h-2v-2h2z"/>
+		<rect x="34" y="76" width="8" height="2"/>
+		<rect x="48" y="76" width="8" height="2"/>
+	</g>
+	<g fill="#171717">
+		<path d="M68 50h2v2h2v4h16v-4h2v-2h2v6h4v2h2v14H66V56h2z"/>
+		<rect x="68" y="72" width="28" height="2"/>
+		<rect x="70" y="76" width="8" height="4"/>
+		<rect x="84" y="76" width="8" height="4"/>
+	</g>
+	<g fill="#ff3333">
+		<path d="M72 60h2v2h4v-2h2v4h-8zM86 60h2v2h4v-2h2v4h-8z"/>
+		<rect x="80" y="66" width="6" height="2"/>
+	</g>
+	<g fill="#ffffff">
+		<rect x="80" y="68" width="2" height="4"/>
+		<rect x="86" y="68" width="2" height="2"/>
+		<path d="M112 4h12v2h-12zM122 6h2v2h-2zM120 8h2v2h-2zM118 10h2v2h-2zM116 12h2v2h-2zM114 14h2v2h-2zM112 16h12v2h-12z"/>
+		<path d="M104 22h10v2h-4v4h-4v4h8v2h-10v-4h4v-4h4v-2h-8z"/>
+		<path d="M94 38h10v2h-4v4h-4v4h8v2H94v-4h4v-4h4v-2h-8z"/>
+	</g>
+</svg>

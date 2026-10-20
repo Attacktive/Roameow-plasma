@@ -18,14 +18,16 @@ Click the cat to hear it meow.
 
 - **Image:** change the size, mirror the image, or choose a PNG, JPEG, GIF, or SVG file.
 - **Idle pose:** enable **Random Idle** on the Movement page, then **Show a different image while idling** on the Image page.
-  Leave the custom idle image empty to use the built-in sleeping cat, or choose your own static or animated image.
+  Leave the custom idle image empty to use the matching built-in sleeping Nyan Cat or Tac Nayn, or choose your own static or animated image.
   The pose is optional and off by default; the cat resumes its normal image when its nap ends.
 - **Sound:** adjust the volume, choose an MP3, WAV, or OGG file, and use **Test** to preview it.
 - **Restore Defaults** resets only the current configuration page; use Plasma's **Apply** or **OK** button to save changes.
 
+Custom image, idle-image, and sound paths are browse-only: use the file picker to choose a file, or the clear/reset action to return to the built-in asset.
+
 If a custom image or sound cannot load, its configuration page shows an error with actions to choose another file or return to the built-in asset.
 The selected path is kept until you explicitly replace or reset it.
-Absolute paths containing `#` or `?` are supported, as are percent-encoded paths saved by older versions.
+For existing settings, absolute paths containing `#` or `?` are supported, as are percent-encoded paths saved by older versions.
 Existing percent escapes are preserved for compatibility; use the file picker for filenames containing literal sequences such as `%20`.
 
 

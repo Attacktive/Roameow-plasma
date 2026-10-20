@@ -25,8 +25,8 @@ Kirigami.ScrollablePage {
 	property string cfg_customIdleImagePathDefault: ''
 
 	readonly property var defaultImages: [
-		{ value: 'nyancat', label: 'Nyan Cat', image: '../../images/nyancat.gif' },
-		{ value: 'tacnayn', label: 'Tac Nayn', image: '../../images/tacnayn.gif' }
+		{ value: 'nyancat', label: 'Nyan Cat', image: '../../images/nyancat.gif', idleImage: '../../images/sleepingcat.svg' },
+		{ value: 'tacnayn', label: 'Tac Nayn', image: '../../images/tacnayn.gif', idleImage: '../../images/sleepingtacnayn.svg' }
 	]
 
 	function restoreDefaults() {
@@ -112,6 +112,7 @@ Kirigami.ScrollablePage {
 				Kirigami.FormData.label: i18n('Custom image:')
 				placeholderText: i18n('Leave empty for built-in image')
 				text: imagePage.cfg_customImagePathDefault
+				readOnly: true
 				Layout.fillWidth: true
 
 				readonly property var fileOpeningAction: Kirigami.Action {
@@ -193,8 +194,9 @@ Kirigami.ScrollablePage {
 			Kirigami.ActionTextField {
 				id: customIdleImageField
 				Kirigami.FormData.label: i18n('Custom idle image:')
-				placeholderText: i18n('Leave empty for built-in sleeping cat')
+				placeholderText: i18n('Leave empty for matching built-in cat')
 				text: imagePage.cfg_customIdleImagePathDefault
+				readOnly: true
 				enabled: showIdleImageCheckBox.checked
 				Layout.fillWidth: true
 
@@ -223,6 +225,11 @@ Kirigami.ScrollablePage {
 				readonly property url imagePath: {
 					if (customIdleImageField.text.length > 0) {
 						return MediaPaths.source(customIdleImageField.text, '');
+					}
+
+					const selected = imagePage.defaultImages.find(({ value }) => value === imagePage.cfg_defaultImage);
+					if (selected) {
+						return selected.idleImage;
 					}
 
 					return '../../images/sleepingcat.svg';

@@ -13,6 +13,11 @@ PlasmoidItem {
 		'tacnayn': Qt.resolvedUrl('../images/tacnayn.gif')
 	})
 
+	readonly property var defaultIdleImages: ({
+		'nyancat': Qt.resolvedUrl('../images/sleepingcat.svg'),
+		'tacnayn': Qt.resolvedUrl('../images/sleepingtacnayn.svg')
+	})
+
 	Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 	Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
@@ -38,7 +43,7 @@ PlasmoidItem {
 		)
 		idleImageSource: MediaPaths.source(
 			plasmoid.configuration.customIdleImagePath,
-			Qt.resolvedUrl('../images/sleepingcat.svg')
+			root.defaultIdleImages[plasmoid.configuration.defaultImage] || Qt.resolvedUrl('../images/sleepingcat.svg')
 		)
 		showIdleImage: plasmoid.configuration.showIdleImage
 		enableMovement: plasmoid.configuration.enableMovement
