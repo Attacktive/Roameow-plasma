@@ -22,6 +22,7 @@ Click the cat to hear it meow.
   Intermediate values are sampled every two seconds, independently of movement speed; consecutive sleeping or moving intervals are normal.
   Percentage and enable/disable changes apply immediately.
   Previously saved percentages keep their numeric values and use this new meaning.
+  With movement enabled, initial placement is randomized once the widget has usable dimensions, including when the cat starts asleep.
 - **Idle pose:** enable **Random Idle** on the Movement page, then **Show a different image while idling** on the Image page.
   Leave the custom idle image empty to use the matching built-in sleeping Nyan Cat or Tac Nayn, or choose your own static or animated image.
   The pose is optional and off by default; the cat resumes its normal image when its nap ends.

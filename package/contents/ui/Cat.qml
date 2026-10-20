@@ -12,23 +12,37 @@ Item {
 	property bool enableRandomIdle: false
 	property int idleProbability: 13
 	property var idleRandom: Math.random
+	property var positionRandom: Math.random
 	property bool enableFlipping: true
 	property bool mirrorImage: false
 
 	signal clicked()
 
 	property bool isIdle: false
+	property bool initialPositionSet: false
 	property point targetPosition: Qt.point(0, 0)
 	property bool movingRight: true
 
 	function moveToRandomPosition() {
 		const maxX = Math.max(0, width - imageContainer.width);
 		const maxY = Math.max(0, height - imageContainer.height);
-		const targetX = Math.random() * maxX;
-		const targetY = Math.random() * maxY;
+		const targetX = positionRandom() * maxX;
+		const targetY = positionRandom() * maxY;
 
 		targetPosition = Qt.point(targetX, targetY);
 		movingRight = targetX > imageContainer.x;
+	}
+
+	function placeInitially() {
+		if (initialPositionSet || !enableMovement || width <= 0 || height <= 0) {
+			return;
+		}
+
+		moveToRandomPosition();
+		imageContainer.x = targetPosition.x;
+		imageContainer.y = targetPosition.y;
+		initialPositionSet = true;
+		moveToRandomPosition();
 	}
 
 	function updateIdleState() {
@@ -45,15 +59,30 @@ Item {
 		isIdle = idleRandom() * 100 < idleProbability;
 	}
 
-	onEnableMovementChanged: updateIdleState()
+	onEnableMovementChanged: {
+		updateIdleState();
+		if (enableMovement && !initialPositionSet) {
+			Qt.callLater(placeInitially);
+		}
+	}
+
+	onWidthChanged: {
+		if (!initialPositionSet) {
+			Qt.callLater(placeInitially);
+		}
+	}
+
+	onHeightChanged: {
+		if (!initialPositionSet) {
+			Qt.callLater(placeInitially);
+		}
+	}
+
 	onEnableRandomIdleChanged: updateIdleState()
 	onIdleProbabilityChanged: updateIdleState()
 
 	Component.onCompleted: {
-		if (enableMovement) {
-			moveToRandomPosition();
-		}
-
+		Qt.callLater(placeInitially);
 		updateIdleState();
 	}
 
@@ -112,7 +141,7 @@ Item {
 	}
 
 	FrameAnimation {
-		running: cat.enableMovement && !cat.isIdle
+		running: cat.initialPositionSet && cat.enableMovement && !cat.isIdle
 
 		onTriggered: {
 			const step = cat.speed * frameTime * 50;

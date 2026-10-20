@@ -37,11 +37,55 @@ TestCase {
 		signalName: 'clicked'
 	}
 
+	function test_sleepStartsAtRandomPositionAndDoesNotReseed() {
+		const cat = createTemporaryObject(catComponent, this, { positionRandom: () => 0.5 });
+		const sprite = findChild(cat, 'catSprite');
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(118, 68));
+		compare(cat.isIdle, true);
+		cat.width = 500;
+		cat.height = 400;
+		cat.enableRandomIdle = false;
+		cat.enableRandomIdle = true;
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(118, 68));
+	}
+
+	function test_sleepPlacementWaitsForBothDimensions() {
+		const cat = createTemporaryObject(catComponent, this, { width: 0, height: 0, positionRandom: () => 0.5 });
+		const sprite = findChild(cat, 'catSprite');
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(0, 0));
+		cat.width = 300;
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(0, 0));
+		cat.height = 200;
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(118, 68));
+		compare(cat.isIdle, true);
+	}
+
+	function test_disabledMovementKeepsAnchoredPlacementUntilEnabled() {
+		const cat = createTemporaryObject(catComponent, this, { enableMovement: false, positionRandom: () => 0.5 });
+		const sprite = findChild(cat, 'catSprite');
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(0, 0));
+		cat.width = 400;
+		cat.height = 300;
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(0, 0));
+		cat.enableMovement = true;
+		verify(waitForRendering(sprite));
+		compare(sprite.mapToItem(cat, 0, 0), Qt.point(168, 118));
+		compare(cat.isIdle, true);
+	}
+
 	function test_fullIdleStartsImmediatelyAndNeverWakes() {
 		const cat = createTemporaryObject(catComponent, this);
 		compare(cat.isIdle, true);
 		const sprite = findChild(cat, 'catSprite');
 		compare(sprite.source, cat.idleImageSource);
+		verify(waitForRendering(sprite));
 		const position = sprite.mapToItem(cat, 0, 0);
 		idleSpy.target = cat;
 		idleSpy.clear();
@@ -64,13 +108,15 @@ TestCase {
 	}
 
 	function test_zeroIdleKeepsMovingEvenWithSleepRolls() {
-		const cat = createTemporaryObject(catComponent, this, { idleProbability: 0, speed: 1, idleRandom: () => 0.25 });
-		cat.targetPosition = Qt.point(200, 100);
+		const cat = createTemporaryObject(catComponent, this, { idleProbability: 0, speed: 1, idleRandom: () => 0.25, positionRandom: () => 0.5 });
 		compare(cat.isIdle, false);
 		idleSpy.target = cat;
 		idleSpy.clear();
 		const sprite = findChild(cat, 'catSprite');
-		tryVerify(() => sprite.mapToItem(cat, 0, 0).x > 0);
+		verify(waitForRendering(sprite));
+		const position = sprite.mapToItem(cat, 0, 0);
+		cat.targetPosition = Qt.point(200, 100);
+		tryVerify(() => sprite.mapToItem(cat, 0, 0).x > position.x);
 		wait(2200);
 		compare(cat.isIdle, false);
 		compare(idleSpy.count, 0);
@@ -78,9 +124,10 @@ TestCase {
 
 	function test_idleClockIgnoresWaypointsAndAllowsConsecutiveSleep() {
 		let roll = 0.75;
-		const cat = createTemporaryObject(catComponent, this, { idleProbability: 50, speed: 0.001, idleRandom: () => roll });
-		cat.targetPosition = Qt.point(200, 100);
+		const cat = createTemporaryObject(catComponent, this, { idleProbability: 50, speed: 0.001, idleRandom: () => roll, positionRandom: () => 0.5 });
 		compare(cat.isIdle, false);
+		verify(waitForRendering(findChild(cat, 'catSprite')));
+		cat.targetPosition = Qt.point(200, 100);
 		roll = 0.25;
 		tryCompare(cat, 'isIdle', true, 2700);
 		const sprite = findChild(cat, 'catSprite');
