@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nyan-wanderer\n"
 "Report-Msgid-Bugs-To: https://github.com/Attacktive/Roameow-plasma\n"
-"POT-Creation-Date: 2025-04-27 15:05+0900\n"
-"Language: en\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-20 18:59+0900\n"
 "PO-Revision-Date: 2026-06-26 17:55+0900\n"
 "Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
 "Language-Team: English\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../contents/config/config.qml ../contents/ui/config/configImage.qml
@@ -20,7 +20,7 @@ msgstr "Image"
 msgid "Movement"
 msgstr "Movement"
 
-#: ../contents/config/config.qml
+#: ../contents/config/config.qml ../contents/ui/config/configSound.qml
 msgid "Sound"
 msgstr "Sound"
 
@@ -33,16 +33,24 @@ msgid "Image files"
 msgstr "Image files"
 
 #: ../contents/ui/config/configImage.qml
+msgid "Choose an idle image file"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
 msgid "Image size:"
 msgstr "Image size:"
+
+#: ../contents/ui/config/configImage.qml
+msgid "Built-in image:"
+msgstr ""
 
 #: ../contents/ui/config/configImage.qml
 msgid "Custom image:"
 msgstr "Custom image:"
 
 #: ../contents/ui/config/configImage.qml
-msgid "Leave empty for default Nyan Cat"
-msgstr "Leave empty for default Nyan Cat"
+msgid "Leave empty for built-in image"
+msgstr ""
 
 #: ../contents/ui/config/configImage.qml
 msgid "Choose image file"
@@ -53,8 +61,48 @@ msgid "Clear"
 msgstr "Clear"
 
 #: ../contents/ui/config/configImage.qml
+msgid "Failed to load custom image. Please choose another file or reset to the built-in image."
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml ../contents/ui/config/configSound.qml
+msgid "Choose File…"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Use Built-in Image"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Idle Image:"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Show a different image while idling"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Custom idle image:"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Leave empty for built-in sleeping cat"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Choose idle image file"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Failed to load custom idle image. Please choose another file or reset to the built-in image."
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
 msgid "Mirror Image:"
 msgstr "Mirror Image:"
+
+#: ../contents/ui/config/configImage.qml ../contents/ui/config/configMovement.qml ../contents/ui/config/configSound.qml
+msgid "Restore Defaults"
+msgstr ""
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Overall Movement:"
@@ -81,6 +129,18 @@ msgid "Image Flipping Based on the Direction:"
 msgstr "Image Flipping Based on the Direction:"
 
 #: ../contents/ui/config/configSound.qml
+msgid "Choose a sound file"
+msgstr "Choose a sound file"
+
+#: ../contents/ui/config/configSound.qml
+msgid "Audio files (*.mp3 *.wav *.ogg)"
+msgstr "Audio files (*.mp3 *.wav *.ogg)"
+
+#: ../contents/ui/config/configSound.qml
+msgid "All files (*)"
+msgstr "All files (*)"
+
+#: ../contents/ui/config/configSound.qml
 msgid "Volume:"
 msgstr "Volume:"
 
@@ -93,25 +153,30 @@ msgid "Custom sound:"
 msgstr "Custom sound:"
 
 #: ../contents/ui/config/configSound.qml
-msgid "Path to custom sound file"
-msgstr "Path to custom sound file"
+msgid "Leave empty for built-in sound"
+msgstr ""
 
 #: ../contents/ui/config/configSound.qml
-msgid "Browse..."
-msgstr "Browse..."
+msgid "Browse…"
+msgstr ""
 
 #: ../contents/ui/config/configSound.qml
 msgid "Reset"
 msgstr "Reset"
 
 #: ../contents/ui/config/configSound.qml
-msgid "Choose a sound file"
-msgstr "Choose a sound file"
+msgid "Failed to load custom sound effect. Please select a valid audio file or reset to the built-in sound."
+msgstr ""
 
 #: ../contents/ui/config/configSound.qml
-msgid "Audio files (*.mp3 *.wav *.ogg)"
-msgstr "Audio files (*.mp3 *.wav *.ogg)"
+msgid "Use Built-in Sound"
+msgstr ""
 
-#: ../contents/ui/config/configSound.qml
-msgid "All files (*)"
-msgstr "All files (*)"
+#~ msgid "Leave empty for default Nyan Cat"
+#~ msgstr "Leave empty for default Nyan Cat"
+
+#~ msgid "Path to custom sound file"
+#~ msgstr "Path to custom sound file"
+
+#~ msgid "Browse..."
+#~ msgstr "Browse..."

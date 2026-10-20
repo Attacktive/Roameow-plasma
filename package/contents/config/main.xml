@@ -19,6 +19,14 @@
 			<label>Mirror image</label>
 			<default>false</default>
 		</entry>
+		<entry name="showIdleImage" type="Bool">
+			<label>Show a different image while idling</label>
+			<default>false</default>
+		</entry>
+		<entry name="customIdleImagePath" type="String">
+			<label>Path to custom idle image</label>
+			<default></default>
+		</entry>
 	</group>
 	<group name="Movement">
 		<entry name="enableMovement" type="Bool">

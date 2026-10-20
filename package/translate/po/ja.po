@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nyan-wanderer\n"
 "Report-Msgid-Bugs-To: https://github.com/Attacktive/Roameow-plasma\n"
-"POT-Creation-Date: 2025-04-27 15:05+0900\n"
-"Language: ja\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-20 18:59+0900\n"
 "PO-Revision-Date: 2026-06-26 17:55+0900\n"
 "Last-Translator: Attacktive <tribute2pantera@gmail.com>\n"
 "Language-Team: Japanese\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../contents/config/config.qml ../contents/ui/config/configImage.qml
@@ -20,7 +20,7 @@ msgstr "画像"
 msgid "Movement"
 msgstr "移動"
 
-#: ../contents/config/config.qml
+#: ../contents/config/config.qml ../contents/ui/config/configSound.qml
 msgid "Sound"
 msgstr "サウンド"
 
@@ -33,16 +33,24 @@ msgid "Image files"
 msgstr "画像ファイル"
 
 #: ../contents/ui/config/configImage.qml
+msgid "Choose an idle image file"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
 msgid "Image size:"
 msgstr "画像サイズ："
+
+#: ../contents/ui/config/configImage.qml
+msgid "Built-in image:"
+msgstr ""
 
 #: ../contents/ui/config/configImage.qml
 msgid "Custom image:"
 msgstr "カスタム画像："
 
 #: ../contents/ui/config/configImage.qml
-msgid "Leave empty for default Nyan Cat"
-msgstr "デフォルトのNyan Catの場合は空欄"
+msgid "Leave empty for built-in image"
+msgstr ""
 
 #: ../contents/ui/config/configImage.qml
 msgid "Choose image file"
@@ -53,8 +61,48 @@ msgid "Clear"
 msgstr "クリア"
 
 #: ../contents/ui/config/configImage.qml
+msgid "Failed to load custom image. Please choose another file or reset to the built-in image."
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml ../contents/ui/config/configSound.qml
+msgid "Choose File…"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Use Built-in Image"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Idle Image:"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Show a different image while idling"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Custom idle image:"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Leave empty for built-in sleeping cat"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Choose idle image file"
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
+msgid "Failed to load custom idle image. Please choose another file or reset to the built-in image."
+msgstr ""
+
+#: ../contents/ui/config/configImage.qml
 msgid "Mirror Image:"
 msgstr "ミラー画像："
+
+#: ../contents/ui/config/configImage.qml ../contents/ui/config/configMovement.qml ../contents/ui/config/configSound.qml
+msgid "Restore Defaults"
+msgstr ""
 
 #: ../contents/ui/config/configMovement.qml
 msgid "Overall Movement:"
@@ -81,6 +129,18 @@ msgid "Image Flipping Based on the Direction:"
 msgstr "方向に基づく画像反転："
 
 #: ../contents/ui/config/configSound.qml
+msgid "Choose a sound file"
+msgstr "サウンドファイルを選択"
+
+#: ../contents/ui/config/configSound.qml
+msgid "Audio files (*.mp3 *.wav *.ogg)"
+msgstr "オーディオファイル (*.mp3 *.wav *.ogg)"
+
+#: ../contents/ui/config/configSound.qml
+msgid "All files (*)"
+msgstr "すべてのファイル (*)"
+
+#: ../contents/ui/config/configSound.qml
 msgid "Volume:"
 msgstr "音量："
 
@@ -93,25 +153,30 @@ msgid "Custom sound:"
 msgstr "カスタムサウンド："
 
 #: ../contents/ui/config/configSound.qml
-msgid "Path to custom sound file"
-msgstr "カスタムサウンドファイルへのパス"
+msgid "Leave empty for built-in sound"
+msgstr ""
 
 #: ../contents/ui/config/configSound.qml
-msgid "Browse..."
-msgstr "参照..."
+msgid "Browse…"
+msgstr ""
 
 #: ../contents/ui/config/configSound.qml
 msgid "Reset"
 msgstr "リセット"
 
 #: ../contents/ui/config/configSound.qml
-msgid "Choose a sound file"
-msgstr "サウンドファイルを選択"
+msgid "Failed to load custom sound effect. Please select a valid audio file or reset to the built-in sound."
+msgstr ""
 
 #: ../contents/ui/config/configSound.qml
-msgid "Audio files (*.mp3 *.wav *.ogg)"
-msgstr "オーディオファイル (*.mp3 *.wav *.ogg)"
+msgid "Use Built-in Sound"
+msgstr ""
 
-#: ../contents/ui/config/configSound.qml
-msgid "All files (*)"
-msgstr "すべてのファイル (*)"
+#~ msgid "Leave empty for default Nyan Cat"
+#~ msgstr "デフォルトのNyan Catの場合は空欄"
+
+#~ msgid "Path to custom sound file"
+#~ msgstr "カスタムサウンドファイルへのパス"
+
+#~ msgid "Browse..."
+#~ msgstr "参照..."

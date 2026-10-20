@@ -11,6 +11,21 @@ It's completely useless by design. 😏
 
 [tacnayn.webm](https://github.com/user-attachments/assets/82953fea-b08c-4d74-8573-0629e01c540a)
 
+## Customization
+
+Open the widget's configuration to choose a built-in cat or a custom image, adjust movement, and pick a meow sound.
+Click the cat to hear it meow.
+
+- **Image:** change the size, mirror the image, or choose a PNG, JPEG, GIF, or SVG file.
+- **Idle pose:** enable **Random Idle** on the Movement page, then **Show a different image while idling** on the Image page.
+  Leave the custom idle image empty to use the built-in sleeping cat, or choose your own static or animated image.
+  The pose is optional and off by default; the cat resumes its normal image when its nap ends.
+- **Sound:** adjust the volume, choose an MP3, WAV, or OGG file, and use **Test** to preview it.
+- **Restore Defaults** resets only the current configuration page; use Plasma's **Apply** or **OK** button to save changes.
+
+If a custom image or sound cannot load, its configuration page shows an error with actions to choose another file or return to the built-in asset.
+The selected path is kept until you explicitly replace or reset it.
+
 
 ## Installation
 
@@ -32,3 +47,13 @@ $ kpackagetool6 --type Plasma/Applet --install package
 ```
 
 If Roameow is already installed, use `--upgrade` instead of `--install`.
+
+## Development checks
+
+Run the sprite interaction, idle-transition, and compact configuration dialog regression tests with Qt's QML test runner:
+
+```bash
+QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software /usr/lib/qt6/bin/qmltestrunner -input tests
+```
+
+The executable may instead be named `qmltestrunner6` or `qmltestrunner` on your distribution.
