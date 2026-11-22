@@ -37,7 +37,7 @@ jobs:
           pwd
 
           echo "zip -r $artifact_name ."
-          zip -r $artifact_name .
+          zip -r "$artifact_name" .
 
           echo 'popd'
           popd
